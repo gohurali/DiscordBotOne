@@ -4,7 +4,7 @@ A bot using the discord.py API in Python
 API Documentation:
 https://discordpy.readthedocs.io/en/latest/api.html#client
 
-Current Commands:
+#### Current Commands:
 * !hello
 	* Bot greets the user
 * !bye
