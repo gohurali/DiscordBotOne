@@ -16,6 +16,10 @@ async def on_ready():
 @client.event
 async def on_message(message):
 
+    #bot_id = client.get_user_info();
+    #print(bot_id);
+
+
     # Words to represent bad words..
     specificWords = ["soup", "food", "supreme", "backpack"]
 
@@ -24,6 +28,10 @@ async def on_message(message):
         if(i in message.content):
             await client.delete_message(message)
             await client.send_message(message.channel, "No bad words please")
+
+    if(message.content('@BotOne help')):
+        await client.send_message(message.channel, "My prefix is shebang aka !<insert command here>")
+
 
     if(message.content.startswith('!hello')):
         print('Bot said bye');
@@ -36,4 +44,4 @@ async def on_message(message):
         await client.send_message(message.channel,"Hi <@%s>" % (user_id))
 
 # Keep token empty with each push in order to keep bot secure!
-client.run("")
+client.run("NDgwNjIzODI1OTE1MjE1ODcy.Dlqf4Q.Ipp3wJL6uQ3HkgZjHj0Ce-gyits")
