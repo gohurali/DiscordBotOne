@@ -44,4 +44,4 @@ async def on_message(message):
         await client.send_message(message.channel,"Hi <@%s>" % (user_id))
 
 # Keep token empty with each push in order to keep bot secure!
-client.run("NDgwNjIzODI1OTE1MjE1ODcy.Dlqf4Q.Ipp3wJL6uQ3HkgZjHj0Ce-gyits")
+client.run("")
