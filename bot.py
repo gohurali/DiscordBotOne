@@ -4,15 +4,23 @@ __status__ = "Initial Build Stage"
 import discord
 from discord.ext import commands
 import asyncio
-
-Client = discord.Client()
-client = commands.Bot(command_prefix="!")
+import urllib
+#import urllib2
+from bs4 import BeautifulSoup
 
 def get_token_from_file(file_name='token.txt'):
     file_obj = open(file_name, 'r')
     first_line = file_obj.readline()
     return first_line
 
+# def main():
+#     pass
+
+# if __name__ == '__main__':
+#     main()
+
+Client = discord.Client()
+client = commands.Bot(command_prefix="!")
 
 @client.event
 async def on_ready():
@@ -49,5 +57,8 @@ async def on_message(message):
        user_id = message.author.id
        await client.send_message(message.channel,"Hi <@%s>" % (user_id))
 
+@client.event
+async def search_yt_music(query):
+    pass
 #Keep token empty with each push in order to keep bot secure!
 client.run(get_token_from_file())
